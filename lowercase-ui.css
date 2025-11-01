@@ -1,0 +1,31 @@
+/* global lowercase */
+
+body,
+/* settings */
+.modal.mod-settings .setting-item-control button,
+.modal.mod-settings button,
+.modal.mod-settings .mod-cta,
+.modal.mod-settings .clickable-icon,
+.modal.mod-settings select.dropdown{
+text-transform: lowercase !important;
+}
+
+/* exceptions */
+
+/* files */
+.nav-file-title,
+.nav-folder-title,
+/* notes */
+.cm-content,
+.markdown-preview-view,
+/* view header */
+.view-header-title,
+/* tags */
+.cm-hashtag,
+a.tag,
+.tag-pane-tag,
+.tree-item-self.tag-pane-tag .tree-item-inner-text,
+/* vault name */
+.workspace-drawer-vault-name {
+text-transform: none !important;
+}
