@@ -16,8 +16,8 @@ text-transform: lowercase !important;
 .nav-file-title,
 .nav-folder-title,
 /* notes */
-.cm-content,
-.markdown-preview-view,
+body .cm-content,
+body .markdown-preview-view,
 /* view header */
 .view-header-title,
 /* tags */
