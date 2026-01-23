@@ -11,17 +11,22 @@ input[type="text"]::placeholder,
 
 /* titles */
 .inline-title[contenteditable="true"],
-.view-header[data-type="markdown"] .view-header-title,
+.view-header-title[contenteditable="true"],
 .view-header-breadcrumb,
+.nav-file-title,
 .nav-file-title-content,
+.nav-folder-title,
 .nav-folder-title-content,
 .tree-item-inner-text,
 .search-result-file-matched-text,
 .search-result-file-title .tree-item-inner,
+.search-result-file-match .search-result-file-matched-text,
 .suggestion-title,
 .markdown-rendered .internal-link,
 .tooltip.mod-file,
 .tooltip.mod-folder,
+.workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-title,
+body:has(.workspace-tab-header[data-type="markdown"]:hover) .tooltip,
 
 /* note text */
 .cm-content,
