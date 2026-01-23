@@ -1,31 +1,50 @@
 /* global lowercase */
-
-body,
-/* settings */
-.modal.mod-settings .setting-item-control button,
-.modal.mod-settings button,
-.modal.mod-settings .mod-cta,
-.modal.mod-settings .clickable-icon,
-.modal.mod-settings select.dropdown{
-text-transform: lowercase !important;
+body *,
+/* placeholder */
+input[type="search"]::placeholder,
+input[type="text"]::placeholder,
+.prompt-input::placeholder {
+  text-transform: lowercase !important;
 }
 
 /* exceptions */
 
-/* files */
+/* titles */
+.inline-title[contenteditable="true"],
+.view-header-title[contenteditable="true"],
+.view-header-breadcrumb,
 .nav-file-title,
+.nav-file-title-content,
 .nav-folder-title,
-/* notes */
-body .cm-content,
-body .markdown-preview-view,
-/* view header */
-.view-header-title,
+.nav-folder-title-content,
+.tree-item-inner-text,
+.search-result-file-matched-text,
+.search-result-file-title .tree-item-inner,
+.search-result-file-match .search-result-file-matched-text,
+.suggestion-title,
+.markdown-rendered .internal-link,
+.tooltip.mod-file,
+.tooltip.mod-folder,
+.workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-title,
+body:has(.workspace-tab-header[data-type="markdown"]:hover) .tooltip,
+
+/* note text */
+.cm-content,
+.cm-content .cm-line,
+.markdown-preview-view,
+
+/* input fields */
+input[type="search"],
+input[type="text"],
+.prompt-input,
+
 /* tags */
 .cm-hashtag,
 a.tag,
 .tag-pane-tag,
 .tree-item-self.tag-pane-tag .tree-item-inner-text,
-/* vault name */
+
+/* vault */
 .workspace-drawer-vault-name {
-text-transform: none !important;
+  text-transform: none !important;
 }
