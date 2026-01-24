@@ -27,6 +27,8 @@ input[type="text"]::placeholder,
 .tooltip.mod-folder,
 .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-title,
 body:has(.workspace-tab-header[data-type="markdown"]:hover) .tooltip,
+.workspace-tab-header[data-type="canvas"] .workspace-tab-header-inner-title,
+.workspace-tab-header[data-type="bases"] .workspace-tab-header-inner-title,
 
 /* note text */
 .cm-content,
