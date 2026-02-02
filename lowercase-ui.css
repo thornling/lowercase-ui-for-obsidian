@@ -1,32 +1,48 @@
 /* global lowercase */
 body *,
 /* placeholder */
-input[type="search"]::placeholder,
-input[type="text"]::placeholder,
-.prompt-input::placeholder {
+:is(
+  input:is(
+    [type="search"],
+    [type="text"]),
+  .prompt-input
+)::placeholder {
   text-transform: lowercase !important;
 }
 
 /* exceptions */
 
 /* titles */
-.inline-title[contenteditable="true"],
-.view-header-title[contenteditable="true"],
+:is(
+  .inline-title,
+  .view-header-title
+)[contenteditable="true"],
 .view-header-breadcrumb,
-.nav-file-title,
-.nav-file-title-content,
-.nav-folder-title,
-.nav-folder-title-content,
-.tree-item-inner-text,
-.search-result-file-matched-text,
-.search-result-file-title .tree-item-inner,
-.search-result-file-match .search-result-file-matched-text,
+.titlebar-text,
+
+[class^="nav-file"],
+[class^="nav-folder"],
+[class*="tree-item"],
+[class*="search-result-file-"],
 .suggestion-title,
+
 .markdown-rendered .internal-link,
-.tooltip.mod-file,
-.tooltip.mod-folder,
-.workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-title,
-body:has(.workspace-tab-header[data-type="markdown"]:hover) .tooltip,
+
+.workspace-tab-header:is(
+  [data-type="markdown"],
+  [data-type="canvas"],
+  [data-type="bases"]
+) .workspace-tab-header-inner-title,
+body:has(
+  .workspace-tab-header.workspace-tab-header:is(
+    [data-type="markdown"],
+    [data-type="canvas"],
+    [data-type="bases"]
+):hover) .tooltip,
+.tooltip:is(
+  .mod-file,
+  .mod-folder
+),
 
 /* note text */
 .markdown-source-view.mod-cm6 .cm-content,
@@ -38,13 +54,12 @@ body:has(.workspace-tab-header[data-type="markdown"]:hover) .tooltip,
 input[type="search"],
 input[type="text"],
 .prompt-input,
-.setting-item-control textarea,
+textarea,
 
 /* tags */
 .cm-hashtag,
 a.tag,
 .tag-pane-tag,
-.tree-item-self.tag-pane-tag .tree-item-inner-text,
 
 /* vault */
 .workspace-drawer-vault-name {
