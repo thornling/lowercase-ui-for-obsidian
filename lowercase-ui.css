@@ -20,25 +20,29 @@ body *,
 .view-header-breadcrumb,
 .titlebar-text,
 
+
 [class^="nav-file"],
 [class^="nav-folder"],
-[class*="tree-item"],
 [class*="search-result-file-"],
-.suggestion-title,
+[class*="tree-item"]:not(.backlink-pane *),
+.backlink-pane .search-result-container [class*="tree-item-inner"],
 
 .markdown-rendered .internal-link,
 
-.workspace-tab-header:is(
-  [data-type="markdown"],
-  [data-type="canvas"],
-  [data-type="bases"]
-) .workspace-tab-header-inner-title,
+.mod-root .view-header-title-container :not(
+  [data-type="graph"],
+  [data-type="empty"]
+),
+.mod-root .workspace-tab-header:not(
+  [data-type="graph"],
+  [data-type="empty"]
+) .workspace-tab-header-inner-title :not(.workspace-drawer-tab-options),
 body:has(
-  .workspace-tab-header.workspace-tab-header:is(
-    [data-type="markdown"],
-    [data-type="canvas"],
-    [data-type="bases"]
-):hover) .tooltip,
+  .mod-root .workspace-tab-header.workspace-tab-header:not(
+  [data-type="graph"],
+  [data-type="empty"]
+  ):hover
+) .tooltip,
 .tooltip:is(
   .mod-file,
   .mod-folder
@@ -54,6 +58,7 @@ body:has(
 input[type="search"],
 input[type="text"],
 .prompt-input,
+
 textarea,
 
 /* tags */
