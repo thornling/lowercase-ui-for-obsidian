@@ -49,6 +49,8 @@ body:has(
 .mobile-tab-title,
 
 /* note text */
+.canvas-node-content,
+.canvas-node-content *,
 .markdown-source-view.mod-cm6 .cm-content,
 .markdown-source-view.mod-cm6 .cm-content *,
 .popover.hover-popover .markdown-preview-view,
