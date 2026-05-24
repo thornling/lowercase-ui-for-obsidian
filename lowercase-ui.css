@@ -29,24 +29,24 @@ body *,
 
 .markdown-rendered .internal-link,
 
-.mod-root .view-header-title-container :not(
+.view-header-title-container :not(
   [data-type="graph"],
   [data-type="empty"]
-),
-.mod-root .workspace-tab-header:not(
-  [data-type="graph"],
-  [data-type="empty"]
-) .workspace-tab-header-inner-title :not(.workspace-drawer-tab-options),
+) .workspace-tab-header-inner-title,
+.mod-root
+.workspace-tab-header:not([data-type="graph"]):not([data-type="empty"])
+.workspace-tab-header-inner-title:not(.workspace-drawer-tab-options),
 body:has(
-  .mod-root .workspace-tab-header.workspace-tab-header:not(
-  [data-type="graph"],
-  [data-type="empty"]
-  ):hover
+  .mod-root
+  .workspace-tab-header.workspace-tab-header:not([data-type="graph"]):not([data-type="empty"]):hover
 ) .tooltip,
 .tooltip:is(
   .mod-file,
   .mod-folder
 ),
+
+.mobile-tab-wrapper
+.mobile-tab-title,
 
 /* note text */
 .markdown-source-view.mod-cm6 .cm-content,
