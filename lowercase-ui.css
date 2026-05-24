@@ -55,11 +55,15 @@ body:has(
 .markdown-source-view.mod-cm6 .cm-content *,
 .popover.hover-popover .markdown-preview-view,
 .popover.hover-popover .markdown-preview-view *,
+.workspace-leaf.mod-active .markdown-reading-view,
+.workspace-leaf.mod-active .markdown-reading-view *,
 
 /* input fields */
 input[type="search"],
 input[type="text"],
 .prompt-input,
+.workspace-leaf.mod-active .metadata-property-value,
+.workspace-leaf.mod-active .metadata-property-value *:not(:empty),
 
 textarea,
 
@@ -67,6 +71,12 @@ textarea,
 .cm-hashtag,
 a.tag,
 .tag-pane-tag,
+
+/* suggestions */
+.suggestion-container.mod-property-key,
+.suggestion-container.mod-property-key *,
+.suggestion-container .suggestion-item.mod-complex:not(.mod-group),
+.suggestion-container .suggestion-item.mod-complex:not(.mod-group) *,
 
 /* vault */
 .workspace-drawer-vault-name {
